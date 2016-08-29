@@ -157,7 +157,7 @@ public class NutritionEntryCreateFragment extends Fragment implements View.OnCli
 
     public void setViewUnclickable() {
         mDairyRatingBar.setRating(dairyCount);
-        mProteinRatingBar.setRating(proteinCount);
+        mProteinRatingBar.setRating((float)((float)proteinCount/2));
         mGrainsRatingBar.setRating(grainsCount);
         mFruitsRatingBar.setRating(fruitCount);
         mVegetablesRatingBar.setRating(fruitCount);
@@ -186,7 +186,7 @@ public class NutritionEntryCreateFragment extends Fragment implements View.OnCli
 
         int atticFoodNow = mAtticFoodCountNp.getValue();
         int dairyNow = (int) mDairyRatingBar.getRating();
-        int proteinNow = (int) mProteinRatingBar.getRating();
+        int proteinNow = (int)( mProteinRatingBar.getRating() * 2);
         int fruitsNow = (int) mFruitsRatingBar.getRating();
         int vegetablesNow = (int) mVegetablesRatingBar.getRating();
         int grainsNow = (int) mGrainsRatingBar.getRating();
